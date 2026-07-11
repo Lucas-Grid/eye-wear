@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collections — LUMIÈRE Eyewear</title>
+  <meta name="description" content="Explore the LUMIÈRE eyewear collections: sunglasses, optical frames and blue-light glasses, handcrafted in Florence." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site scrolled">
+    <a href="index.html" class="brand"><span class="dot"></span>LUMIÈRE</a>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="collection.html" class="active">Collections</a>
+      <a href="about.html">Maison</a>
+      <a href="contact.html">Book a Fitting</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <section style="padding-top:9rem;background:var(--cream-2);">
+    <div class="container section-head reveal">
+      <p class="eyebrow">The 2026 Collection</p>
+      <h2>Eight silhouettes, one obsession</h2>
+      <p>Filter by category. Every frame is made-to-order in optical or sun, with lenses tuned to your prescription.</p>
+    </div>
+
+    <div class="container" style="display:flex;gap:.6rem;justify-content:center;flex-wrap:wrap;margin-bottom:2.5rem;">
+      <button class="btn btn-solid filter-btn" data-filter="all">All</button>
+      <button class="btn btn-ghost filter-btn" data-filter="sun">Sunglasses</button>
+      <button class="btn btn-ghost filter-btn" data-filter="optical">Optical</button>
+      <button class="btn btn-ghost filter-btn" data-filter="blue">Blue-light</button>
+    </div>
+
+    <div class="container collection-grid" id="grid">
+      <a class="card reveal" data-cat="sun" href="contact.html">
+        <span class="tag">Bestseller</span>
+        <div class="media"><img src="assets/img/aviator.png" alt="The Aviator" loading="lazy" /></div>
+        <div class="body"><div><h3>The Aviator</h3><div class="meta">Gold · Smoke gradient</div></div><div class="price">$240</div></div>
+      </a>
+      <a class="card reveal" data-cat="sun" href="contact.html">
+        <div class="media"><img src="assets/img/cat-eye.png" alt="The Cat-Eye" loading="lazy" /></div>
+        <div class="body"><div><h3>The Cat-Eye</h3><div class="meta">Glossy acetate · Noir</div></div><div class="price">$210</div></div>
+      </a>
+      <a class="card reveal" data-cat="optical" href="contact.html">
+        <div class="media"><img src="assets/img/crystal.png" alt="The Crystal" loading="lazy" /></div>
+        <div class="body"><div><h3>The Crystal</h3><div class="meta">Frosted acetate · Clear</div></div><div class="price">$195</div></div>
+      </a>
+      <a class="card reveal" data-cat="blue" href="contact.html">
+        <div class="media"><img src="assets/img/blue-light.png" alt="The Focus" loading="lazy" /></div>
+        <div class="body"><div><h3>The Focus</h3><div class="meta">Titanium · Blue-light</div></div><div class="price">$225</div></div>
+      </a>
+      <a class="card reveal" data-cat="optical" href="contact.html">
+        <div class="media"><img src="assets/img/rimless.png" alt="The Rimless" loading="lazy" /></div>
+        <div class="body"><div><h3>The Rimless</h3><div class="meta">Silver titanium · Featherlight</div></div><div class="price">$260</div></div>
+      </a>
+      <a class="card reveal" data-cat="sun" href="contact.html">
+        <span class="tag">New</span>
+        <div class="media"><img src="assets/img/model-tortoise.png" alt="The Tortoise" loading="lazy" /></div>
+        <div class="body"><div><h3>The Tortoise</h3><div class="meta">Round · Havana acetate</div></div><div class="price">$205</div></div>
+      </a>
+      <a class="card reveal" data-cat="optical" href="contact.html">
+        <div class="media"><img src="assets/img/boutique.png" alt="The Boutique Edition" loading="lazy" /></div>
+        <div class="body"><div><h3>Boutique Edition</h3><div class="meta">Collector · Numbered</div></div><div class="price">$320</div></div>
+      </a>
+      <a class="card reveal" data-cat="optical" href="contact.html">
+        <div class="media"><img src="assets/img/optician.png" alt="The Clinician" loading="lazy" /></div>
+        <div class="body"><div><h3>The Clinician</h3><div class="meta">Pro-fit · All-day</div></div><div class="price">$230</div></div>
+      </a>
+    </div>
+  </section>
+
+  <!-- COLLECTION FILM -->
+  <section class="split">
+    <div class="container grid">
+      <div class="media reveal">
+        <video autoplay muted loop playsinline poster="assets/img/collection.png">
+          <source src="assets/video/collection.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="reveal">
+        <p class="eyebrow" style="color:var(--gold)">Made to order</p>
+        <h2>From block to frame</h2>
+        <p>Choose a silhouette, then personalize lens type, tint and engraving. Your pair is cut and finished within 10 working days and shipped in our recycled-leather case.</p>
+        <a href="contact.html" class="btn btn-solid">Start your order</a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site">
+    <div class="container grid">
+      <div>
+        <div class="brand"><span class="dot" style="display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--gold);margin-right:.4rem;"></span>LUMIÈRE</div>
+        <p style="margin-top:1rem;max-width:280px;font-size:.9rem;">Precision eyewear, handcrafted in Florence since 2008.</p>
+      </div>
+      <div><h4>Shop</h4><ul><li><a href="collection.html">Sunglasses</a></li><li><a href="collection.html">Optical</a></li><li><a href="collection.html">Blue-light</a></li><li><a href="collection.html">Accessories</a></li></ul></div>
+      <div><h4>Maison</h4><ul><li><a href="about.html">Our story</a></li><li><a href="about.html">Craft</a></li><li><a href="about.html">Sustainability</a></li><li><a href="contact.html">Stockists</a></li></ul></div>
+      <div><h4>Support</h4><ul><li><a href="contact.html">Book a fitting</a></li><li><a href="contact.html">Warranty</a></li><li><a href="contact.html">Repairs</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    </div>
+    <div class="container bottom">
+      <span>© <span id="year">2026</span> LUMIÈRE Eyewear Maison. Demo site.</span>
+      <div class="socials"><a href="#">IG</a><a href="#">X</a><a href="#">FB</a><a href="#">YT</a></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+  <script>
+    // collection filter
+    const btns = document.querySelectorAll(".filter-btn");
+    const cards = document.querySelectorAll("#grid .card");
+    btns.forEach((b) =>
+      b.addEventListener("click", () => {
+        btns.forEach((x) => { x.classList.remove("btn-solid"); x.classList.add("btn-ghost"); });
+        b.classList.add("btn-solid"); b.classList.remove("btn-ghost");
+        const f = b.dataset.filter;
+        cards.forEach((c) => {
+          c.style.display = f === "all" || c.dataset.cat === f ? "" : "none";
+        });
+      })
+    );
+  </script>
+</body>
+</html>

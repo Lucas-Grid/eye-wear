@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book a Fitting — LUMIÈRE Eyewear</title>
+  <meta name="description" content="Book a private eyewear fitting with a LUMIÈRE optician, in boutique or by video call." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <header class="site scrolled">
+    <a href="index.html" class="brand"><span class="dot"></span>LUMIÈRE</a>
+    <nav class="menu">
+      <a href="index.html">Home</a>
+      <a href="collection.html">Collections</a>
+      <a href="about.html">Maison</a>
+      <a href="contact.html" class="active">Book a Fitting</a>
+    </nav>
+    <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </header>
+
+  <section class="contact" style="padding-top:9rem;">
+    <div class="container section-head reveal">
+      <p class="eyebrow">Reserve your session</p>
+      <h2>Book a private fitting</h2>
+      <p>A 30-minute session with a LUMIÈRE optician — in boutique or by secure video. Tell us a little about you and we'll be in touch within one business day.</p>
+    </div>
+
+    <div class="container grid">
+      <div class="reveal">
+        <form id="contact-form" novalidate>
+          <div class="field">
+            <label for="name">Full name</label>
+            <input id="name" name="name" type="text" placeholder="Jane Doe" required />
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" placeholder="jane@example.com" required />
+          </div>
+          <div class="field">
+            <label for="type">Fitting type</label>
+            <select id="type" name="type">
+              <option>In-boutique (Florence)</option>
+              <option>In-boutique (London)</option>
+              <option>In-boutique (New York)</option>
+              <option>Video consultation</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="interest">Frame of interest</label>
+            <select id="interest" name="interest">
+              <option>The Aviator</option>
+              <option>The Cat-Eye</option>
+              <option>The Crystal</option>
+              <option>The Focus (Blue-light)</option>
+              <option>The Rimless</option>
+              <option>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="msg">Notes</label>
+            <textarea id="msg" name="msg" rows="4" placeholder="Prescription details, preferred dates, questions…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-solid">Request appointment</button>
+          <p class="form-note">This is a demo form — no data is sent or stored.</p>
+          <div class="form-ok">Thank you — your request has been received. A LUMIÈRE optician will reach out shortly.</div>
+        </form>
+      </div>
+
+      <div class="info reveal">
+        <div class="row">
+          <div class="ico">✉</div>
+          <div><h4 style="margin-bottom:.2rem;">Email</h4><p style="color:var(--ink-soft);font-size:.92rem;">concierge@lumiere-eyewear.demo</p></div>
+        </div>
+        <div class="row">
+          <div class="ico">☏</div>
+          <div><h4 style="margin-bottom:.2rem;">Phone</h4><p style="color:var(--ink-soft);font-size:.92rem;">+39 055 010 2008</p></div>
+        </div>
+        <div class="row">
+          <div class="ico">⌖</div>
+          <div><h4 style="margin-bottom:.2rem;">Atelier</h4><p style="color:var(--ink-soft);font-size:.92rem;">Via dei Fiori 12, Florence, Italy</p></div>
+        </div>
+
+        <div class="hours" style="margin-top:1.5rem;">
+          <h4>Boutique hours</h4>
+          <div class="line"><span>Mon – Fri</span><span>10:00 – 19:00</span></div>
+          <div class="line"><span>Saturday</span><span>10:00 – 18:00</span></div>
+          <div class="line"><span>Sunday</span><span>By appointment</span></div>
+        </div>
+
+        <div class="media" style="margin-top:1.5rem;border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);">
+          <img src="assets/img/boutique.png" alt="LUMIÈRE boutique interior" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site">
+    <div class="container grid">
+      <div>
+        <div class="brand"><span class="dot" style="display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--gold);margin-right:.4rem;"></span>LUMIÈRE</div>
+        <p style="margin-top:1rem;max-width:280px;font-size:.9rem;">Precision eyewear, handcrafted in Florence since 2008.</p>
+      </div>
+      <div><h4>Shop</h4><ul><li><a href="collection.html">Sunglasses</a></li><li><a href="collection.html">Optical</a></li><li><a href="collection.html">Blue-light</a></li><li><a href="collection.html">Accessories</a></li></ul></div>
+      <div><h4>Maison</h4><ul><li><a href="about.html">Our story</a></li><li><a href="about.html">Craft</a></li><li><a href="about.html">Sustainability</a></li><li><a href="contact.html">Stockists</a></li></ul></div>
+      <div><h4>Support</h4><ul><li><a href="contact.html">Book a fitting</a></li><li><a href="contact.html">Warranty</a></li><li><a href="contact.html">Repairs</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    </div>
+    <div class="container bottom">
+      <span>© <span id="year">2026</span> LUMIÈRE Eyewear Maison. Demo site.</span>
+      <div class="socials"><a href="#">IG</a><a href="#">X</a><a href="#">FB</a><a href="#">YT</a></div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
