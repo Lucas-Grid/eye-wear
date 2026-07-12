@@ -20,6 +20,7 @@
   <meta name="twitter:description" content="The story of LUMIÈRE: where German optical engineering meets Italian acetate artistry in Florence." />
   <meta name="twitter:image" content="https://lucas-grid.github.io/eye-wear/assets/img/og-cover.png" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/auth.css" />
 </head>
 <body>
   <header class="site scrolled">
@@ -31,6 +32,12 @@
       <a href="contact.html">Book a Fitting</a>
     </nav>
     <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <div class="nav-actions">
+      <button class="account-btn">Sign in</button>
+      <button class="cart-btn" aria-label="Open bag">
+        Bag <span id="cart-count">0</span>
+      </button>
+    </div>
   </header>
 
   <section class="about" style="padding-top:9rem;">
@@ -105,6 +112,59 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js"></script>
+  <!-- ===== Auth overlay (sign in / sign up) ===== -->
+  <div class="modal-backdrop"></div>
+  <div class="modal" id="auth-modal" data-mode="signup">
+    <button class="modal-close" aria-label="Close">×</button>
+    <h2 id="auth-title">Create your account</h2>
+    <p class="sub">Save your bag and order history across devices.</p>
+    <form id="auth-form" autocomplete="on">
+      <div class="auth-field">
+        <label for="auth-email">Email</label>
+        <input id="auth-email" type="email" required placeholder="you@example.com" />
+      </div>
+      <div class="auth-field">
+        <label for="auth-password">Password</label>
+        <input id="auth-password" type="password" required minlength="6" placeholder="At least 6 characters" />
+      </div>
+      <p id="auth-msg"></p>
+      <button class="btn btn-solid" id="auth-submit" type="submit">Sign up</button>
+    </form>
+    <p id="auth-switch">Already have an account? <span class="toggle-mode">Sign in</span></p>
+  </div>
+
+  <!-- ===== Cart drawer ===== -->
+  <div class="drawer-backdrop"></div>
+  <aside class="drawer" id="cart-drawer">
+    <button class="drawer-close" aria-label="Close">×</button>
+    <h2>Your Bag</h2>
+    <div id="cart-items"></div>
+    <div class="cart-foot">
+      <div class="cart-total"><span>Total</span><span id="cart-total">$0</span></div>
+      <button class="btn btn-solid" id="checkout-btn" style="width:100%;">Place order</button>
+    </div>
+  </aside>
+
+  <!-- ===== Account panel (orders + sign out) ===== -->
+  <div class="panel-backdrop"></div>
+  <aside class="panel" id="account-panel">
+    <button class="panel-close" aria-label="Close">×</button>
+    <h2>My Account</h2>
+    <div id="account-body"></div>
+  </aside>
+
+  <!-- Firebase + app modules (ES modules, no build step) -->
+  <script type="importmap">
+    {
+      "imports": {
+        "firebase/app": "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js",
+        "firebase/analytics": "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js",
+        "firebase/auth": "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js",
+        "firebase/firestore": "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js"
+      }
+    }
+  </script>
+  <script type="module" src="assets/js/app.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>

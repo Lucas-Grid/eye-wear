@@ -20,6 +20,7 @@
   <meta name="twitter:description" content="Explore the LUMIÈRE eyewear collections: sunglasses, optical frames and blue-light glasses, handcrafted in Florence." />
   <meta name="twitter:image" content="https://lucas-grid.github.io/eye-wear/assets/img/og-cover.png" />
   <link rel="stylesheet" href="assets/css/styles.css" />
+  <link rel="stylesheet" href="assets/css/auth.css" />
 </head>
 <body>
   <header class="site scrolled">
@@ -31,6 +32,12 @@
       <a href="contact.html">Book a Fitting</a>
     </nav>
     <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    <div class="nav-actions">
+      <button class="account-btn">Sign in</button>
+      <button class="cart-btn" aria-label="Open bag">
+        Bag <span id="cart-count">0</span>
+      </button>
+    </div>
   </header>
 
   <section style="padding-top:9rem;background:var(--cream-2);">
@@ -48,40 +55,48 @@
     </div>
 
     <div class="container collection-grid" id="grid">
-      <a class="card reveal" data-cat="sun" href="contact.html">
+      <article class="card reveal" data-cat="sun">
         <span class="tag">Bestseller</span>
         <div class="media"><img src="assets/img/aviator.png" alt="The Aviator" loading="lazy" /></div>
         <div class="body"><div><h3>The Aviator</h3><div class="meta">Gold · Smoke gradient</div></div><div class="price">$240</div></div>
-      </a>
-      <a class="card reveal" data-cat="sun" href="contact.html">
+        <button class="btn btn-solid add-btn" data-add="aviator" data-name="The Aviator" data-price="240" data-img="assets/img/aviator.png">Add to bag</button>
+      </article>
+      <article class="card reveal" data-cat="sun">
         <div class="media"><img src="assets/img/cat-eye.png" alt="The Cat-Eye" loading="lazy" /></div>
         <div class="body"><div><h3>The Cat-Eye</h3><div class="meta">Glossy acetate · Noir</div></div><div class="price">$210</div></div>
-      </a>
-      <a class="card reveal" data-cat="optical" href="contact.html">
+        <button class="btn btn-solid add-btn" data-add="cat-eye" data-name="The Cat-Eye" data-price="210" data-img="assets/img/cat-eye.png">Add to bag</button>
+      </article>
+      <article class="card reveal" data-cat="optical">
         <div class="media"><img src="assets/img/crystal.png" alt="The Crystal" loading="lazy" /></div>
         <div class="body"><div><h3>The Crystal</h3><div class="meta">Frosted acetate · Clear</div></div><div class="price">$195</div></div>
-      </a>
-      <a class="card reveal" data-cat="blue" href="contact.html">
+        <button class="btn btn-solid add-btn" data-add="crystal" data-name="The Crystal" data-price="195" data-img="assets/img/crystal.png">Add to bag</button>
+      </article>
+      <article class="card reveal" data-cat="blue">
         <div class="media"><img src="assets/img/blue-light.png" alt="The Focus" loading="lazy" /></div>
         <div class="body"><div><h3>The Focus</h3><div class="meta">Titanium · Blue-light</div></div><div class="price">$225</div></div>
-      </a>
-      <a class="card reveal" data-cat="optical" href="contact.html">
+        <button class="btn btn-solid add-btn" data-add="focus" data-name="The Focus" data-price="225" data-img="assets/img/blue-light.png">Add to bag</button>
+      </article>
+      <article class="card reveal" data-cat="optical">
         <div class="media"><img src="assets/img/rimless.png" alt="The Rimless" loading="lazy" /></div>
         <div class="body"><div><h3>The Rimless</h3><div class="meta">Silver titanium · Featherlight</div></div><div class="price">$260</div></div>
-      </a>
-      <a class="card reveal" data-cat="sun" href="contact.html">
+        <button class="btn btn-solid add-btn" data-add="rimless" data-name="The Rimless" data-price="260" data-img="assets/img/rimless.png">Add to bag</button>
+      </article>
+      <article class="card reveal" data-cat="sun">
         <span class="tag">New</span>
         <div class="media"><img src="assets/img/model-tortoise.png" alt="The Tortoise" loading="lazy" /></div>
         <div class="body"><div><h3>The Tortoise</h3><div class="meta">Round · Havana acetate</div></div><div class="price">$205</div></div>
-      </a>
-      <a class="card reveal" data-cat="optical" href="contact.html">
+        <button class="btn btn-solid add-btn" data-add="tortoise" data-name="The Tortoise" data-price="205" data-img="assets/img/model-tortoise.png">Add to bag</button>
+      </article>
+      <article class="card reveal" data-cat="optical">
         <div class="media"><img src="assets/img/boutique.png" alt="The Boutique Edition" loading="lazy" /></div>
         <div class="body"><div><h3>Boutique Edition</h3><div class="meta">Collector · Numbered</div></div><div class="price">$320</div></div>
-      </a>
-      <a class="card reveal" data-cat="optical" href="contact.html">
+        <button class="btn btn-solid add-btn" data-add="boutique" data-name="Boutique Edition" data-price="320" data-img="assets/img/boutique.png">Add to bag</button>
+      </article>
+      <article class="card reveal" data-cat="optical">
         <div class="media"><img src="assets/img/optician.png" alt="The Clinician" loading="lazy" /></div>
         <div class="body"><div><h3>The Clinician</h3><div class="meta">Pro-fit · All-day</div></div><div class="price">$230</div></div>
-      </a>
+        <button class="btn btn-solid add-btn" data-add="clinician" data-name="The Clinician" data-price="230" data-img="assets/img/optician.png">Add to bag</button>
+      </article>
     </div>
   </section>
 
@@ -134,5 +149,60 @@
       })
     );
   </script>
+
+  <!-- ===== Auth overlay (sign in / sign up) ===== -->
+  <div class="modal-backdrop"></div>
+  <div class="modal" id="auth-modal" data-mode="signup">
+    <button class="modal-close" aria-label="Close">×</button>
+    <h2 id="auth-title">Create your account</h2>
+    <p class="sub">Save your bag and order history across devices.</p>
+    <form id="auth-form" autocomplete="on">
+      <div class="auth-field">
+        <label for="auth-email">Email</label>
+        <input id="auth-email" type="email" required placeholder="you@example.com" />
+      </div>
+      <div class="auth-field">
+        <label for="auth-password">Password</label>
+        <input id="auth-password" type="password" required minlength="6" placeholder="At least 6 characters" />
+      </div>
+      <p id="auth-msg"></p>
+      <button class="btn btn-solid" id="auth-submit" type="submit">Sign up</button>
+    </form>
+    <p id="auth-switch">Already have an account? <span class="toggle-mode">Sign in</span></p>
+  </div>
+
+  <!-- ===== Cart drawer ===== -->
+  <div class="drawer-backdrop"></div>
+  <aside class="drawer" id="cart-drawer">
+    <button class="drawer-close" aria-label="Close">×</button>
+    <h2>Your Bag</h2>
+    <div id="cart-items"></div>
+    <div class="cart-foot">
+      <div class="cart-total"><span>Total</span><span id="cart-total">$0</span></div>
+      <button class="btn btn-solid" id="checkout-btn" style="width:100%;">Place order</button>
+    </div>
+  </aside>
+
+  <!-- ===== Account panel (orders + sign out) ===== -->
+  <div class="panel-backdrop"></div>
+  <aside class="panel" id="account-panel">
+    <button class="panel-close" aria-label="Close">×</button>
+    <h2>My Account</h2>
+    <div id="account-body"></div>
+  </aside>
+
+  <!-- Firebase + app modules (ES modules, no build step) -->
+  <script type="importmap">
+    {
+      "imports": {
+        "firebase/app": "https://www.gstatic.com/firebasejs/11.10.0/firebase-app.js",
+        "firebase/analytics": "https://www.gstatic.com/firebasejs/11.10.0/firebase-analytics.js",
+        "firebase/auth": "https://www.gstatic.com/firebasejs/11.10.0/firebase-auth.js",
+        "firebase/firestore": "https://www.gstatic.com/firebasejs/11.10.0/firebase-firestore.js"
+      }
+    }
+  </script>
+  <script type="module" src="assets/js/app.js"></script>
+  <script type="module" src="assets/js/main.js"></script>
 </body>
 </html>

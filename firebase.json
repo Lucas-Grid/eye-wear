@@ -9,7 +9,8 @@
       "**/*.md",
       "build_videos.sh",
       "make_og.py",
-      "check.py"
+      "check.py",
+      "firestore.rules"
     ],
     "headers": [
       {
@@ -26,5 +27,8 @@
       }
     ],
     "trailingSlash": false
+  },
+  "firestore": {
+    "rules": "firestore.rules"
   }
 }
