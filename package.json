@@ -1,0 +1,19 @@
+{
+  "name": "lumiere-eyewear",
+  "version": "1.0.0",
+  "private": true,
+  "description": "LUMIÈRE — premium eyewear demo site, hosted on Firebase Hosting.",
+  "scripts": {
+    "serve": "firebase serve",
+    "deploy": "firebase deploy",
+    "build:videos": "bash build_videos.sh",
+    "build:og": "python make_og.py",
+    "check": "python check.py"
+  },
+  "dependencies": {
+    "firebase": "^11.10.0"
+  },
+  "devDependencies": {
+    "firebase-tools": "^14.27.0"
+  }
+}

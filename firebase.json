@@ -1,0 +1,30 @@
+{
+  "hosting": {
+    "public": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**",
+      "**/package-lock.json",
+      "**/*.md",
+      "build_videos.sh",
+      "make_og.py",
+      "check.py"
+    ],
+    "headers": [
+      {
+        "source": "assets/**/*.*",
+        "headers": [
+          { "key": "Cache-Control", "value": "public, max-age=3600" }
+        ]
+      },
+      {
+        "source": "**/*.html",
+        "headers": [
+          { "key": "Cache-Control", "value": "public, max-age=300" }
+        ]
+      }
+    ],
+    "trailingSlash": false
+  }
+}
